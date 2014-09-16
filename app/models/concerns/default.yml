@@ -1,0 +1,10 @@
+persistance:
+  - is_new?
+  - persisted?
+  - destroyed?
+validation:
+  - valid?
+  - invalid?
+changed?:
+  - true
+  - false
