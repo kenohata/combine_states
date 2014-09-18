@@ -33,6 +33,8 @@ gem 'rails-html-sanitizer', '~> 1.0'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 
+gem 'rails_12factor'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
