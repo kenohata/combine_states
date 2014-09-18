@@ -1,5 +1,11 @@
 .container
   .row
+    = form_for @uploaded, method: :put, html: { class: "form-inline" } do |f|
+      .form-group
+        = f.label :file
+        = f.file_field :file
+      = f.submit class: "btn btn-default"
+  .row
     - @tree.each_with_index do |state, i|
       .col-xs-6.col-md-3.col-xl-2
         .panel.panel-default.page-break-inside-avoid
