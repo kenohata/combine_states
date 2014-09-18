@@ -1,3 +1,12 @@
 .container
-  .panel.panel-default
-    .panel-body
+  .row
+    - @tree.each_with_index do |state, i|
+      .col-xs-6.col-md-3.col-xl-2
+        .panel.panel-default.page-break-inside-avoid
+          .panel-heading #{i + 1}.
+          .panel-body
+            %table.table.table-striped.table-responsive
+              - state.each_with_index do |val, index|
+                %tr
+                  %th= @tree.keys[index]
+                  %td= val
