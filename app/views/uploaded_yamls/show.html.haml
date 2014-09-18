@@ -1,6 +1,6 @@
 .container
   .row
-    = form_for @uploaded, method: :put, html: { class: "form-inline" } do |f|
+    = form_for @yaml, method: :put, html: { class: "form-inline" } do |f|
       .form-group
         = f.label :file
         = f.file_field :file
