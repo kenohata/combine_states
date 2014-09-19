@@ -1,5 +1,5 @@
 .container
-  .row
+  .row.page-break-after-always
     = form_for @yaml, method: :put, html: { class: "form-inline" } do |f|
       .form-group
         = f.label :file
