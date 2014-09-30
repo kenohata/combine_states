@@ -1,17 +1,17 @@
-.container
+.container-fluid
   .row.page-break-after-always
     = form_for @yaml, method: :put, html: { class: "form-inline" } do |f|
       .form-group
         = f.label :file
         = f.file_field :file
       = f.submit class: "btn btn-default"
-  .row
-    - @tree.each_with_index do |state, i|
-      .col-xs-4.col-md-3.col-xl-2
-        .panel.panel-default.page-break-inside-avoid
-          .panel-heading #{i + 1}.
-          %table.table.table-striped
-            - state.each_with_index do |val, index|
-              %tr
-                %th= @tree.keys[index]
-                %td= val
+  - @tree.each_with_index do |state, i|
+    .panel.panel-default.page-break-inside-avoid
+      .panel-heading #{i + 1}.
+      %table.table.table-condensed.table-striped
+        %tr
+          - state.each_with_index do |val, index|
+            %th= @tree.keys[index]
+        %tr
+          - state.each_with_index do |val, index|
+            %td= val
